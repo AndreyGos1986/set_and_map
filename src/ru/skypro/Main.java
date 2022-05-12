@@ -32,36 +32,13 @@ public class Main {
                 "Виталий", "Артем", "Максим",
                 "Анатолий", "Андрей", "Сергей",
                 "Виталий", "Андрей", "Семён", "Сергей"));
-        Set<String> strings2 = new HashSet<>();
-        for (int i = 0; i < strings.size(); i++) {
-            strings2.add(strings.get(i));
-        }
-        System.out.println(strings2);
+
+       Set <String> set  = new HashSet<>(strings);
+        System.out.println(set);
         System.out.println("==================================================================================================");
 
 
-        Map<String, Integer> hm = new HashMap<>();
-        String stringsList[] = {
-                "Андрей",
-                "Андрей",
-                "Сергей",
-                "Сергей",
-                "Сергей",
-                "Сергей",
-                "Александр",
-                "Александр",
-                "Вадим",
-                "Евгений",
-                "Виталий",
-                "Семён"};
 
-
-        for (int i = 0; i < stringsList.length; i++) {
-            if (hm.containsKey(stringsList[i]))
-                hm.put(stringsList[i], hm.get(stringsList[i]) + 1);
-            else
-                hm.put(stringsList[i], 1);
-        }
-        System.out.println(hm);
+        System.out.println(strings.size()- set.size());
     }
 }
